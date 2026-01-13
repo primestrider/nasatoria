@@ -6,8 +6,8 @@ const utilRoutes: RouteRecordRaw[] = [
   // delete or change this later
   {
     path: "/",
-    name: "LandingPage",
-    component: () => import("@/shared/views/LandingPageView.vue"),
+    name: "HomeView",
+    component: () => import("@/shared/views/HomeView.vue"),
   },
   {
     path: "/:pathMatch(.*)*",

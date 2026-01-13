@@ -1,14 +1,38 @@
 @import "tailwindcss";
 
 @theme {
+  /* Font */
   --font-saira: "Saira", sans-serif;
+
+  /* Background */
+  --color-primary: #0b1020; /* main background */
+  --color-secondary: #11162a; /* surface / card */
+
+  /* Accent (NASA Blue) */
+  --color-accent: #3366ff;
+  --color-accent-hover: #4d7cff;
+  --color-accent-dark: #254edb;
+
+  /* Text */
+  --color-primary-text: #e6e9f0;
+  --color-secondary-text: #aab0d6;
+
+  /* Border */
+  --color-border: #1f2547;
+  --color-border-strong: #2a3270;
+
+  /* Status */
+  --color-success: #22c55e;
+  --color-warning: #facc15;
+  --color-danger: #ef4444;
+  --color-info: #3b82f6;
 }
 
+/* Fonts */
 @font-face {
   font-family: "Saira";
   src: url("./fonts/Saira-Light.ttf");
   font-weight: 300;
-  unicode-range: U+0025-00FF;
   font-display: swap;
 }
 
@@ -16,7 +40,6 @@
   font-family: "Saira";
   src: url("./fonts/Saira-Regular.ttf");
   font-weight: 400;
-  unicode-range: U+0025-00FF;
   font-display: swap;
 }
 
@@ -24,7 +47,6 @@
   font-family: "Saira";
   src: url("./fonts/Saira-Medium.ttf");
   font-weight: 500;
-  unicode-range: U+0025-00FF;
   font-display: swap;
 }
 
@@ -32,7 +54,6 @@
   font-family: "Saira";
   src: url("./fonts/Saira-SemiBold.ttf");
   font-weight: 600;
-  unicode-range: U+0025-00FF;
   font-display: swap;
 }
 
@@ -40,7 +61,6 @@
   font-family: "Saira";
   src: url("./fonts/Saira-Bold.ttf");
   font-weight: 700;
-  unicode-range: U+0025-00FF;
   font-display: swap;
 }
 
@@ -48,6 +68,14 @@
   font-family: "Saira";
   src: url("./fonts/Saira-ExtraBold.ttf");
   font-weight: 800;
-  unicode-range: U+0025-00FF;
   font-display: swap;
+}
+
+/* Dark theme hint */
+input[type="number"],
+textarea,
+input[type="datetime-local"],
+input[type="date"],
+input[type="time"] {
+  color-scheme: dark;
 }
