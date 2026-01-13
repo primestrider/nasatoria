@@ -1,12 +1,19 @@
 <script setup lang="ts">
 import NasaLogo from "@/assets/logo.svg"
+
+const options = {
+  licenseKey: "OPEN-SOURCE-GPLV3-LICENSE", // untuk open source / portfolio
+  scrollingSpeed: 800, // durasi scroll (ms)
+  easingcss3: "ease-in-out", // easing halus
+  keyboardScrolling: true,
+  fitToSection: true,
+}
 </script>
 
 <template>
-  <!-- Fullpage container -->
-  <div class="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
+  <full-page :options="options">
     <!-- SECTION 1: HERO -->
-    <section class="h-screen snap-start flex items-center">
+    <section class="section flex items-center">
       <div class="max-w-3xl mx-auto px-6 w-full">
         <div class="bg-secondary border border-border rounded-2xl p-8">
           <img :src="NasaLogo" alt="nasa-logo" class="h-10 mb-4" />
@@ -29,7 +36,7 @@ import NasaLogo from "@/assets/logo.svg"
     </section>
 
     <!-- SECTION 2: FEATURES -->
-    <section class="h-screen snap-start flex items-center">
+    <section class="section flex items-center">
       <div class="max-w-3xl mx-auto px-6 w-full">
         <div class="grid gap-6 md:grid-cols-3">
           <div class="bg-secondary border border-border rounded-xl p-6">
@@ -51,21 +58,21 @@ import NasaLogo from "@/assets/logo.svg"
     </section>
 
     <!-- SECTION 3: ABOUT -->
-    <section class="h-screen snap-start flex items-center">
+    <section class="section flex items-center">
       <div class="max-w-3xl mx-auto px-6 w-full">
         <div class="bg-secondary border border-border rounded-2xl p-8">
           <h2 class="text-2xl font-bold text-accent">About Nasatoria</h2>
 
           <p class="mt-4 text-secondary-text leading-relaxed">
-            Nasatoria is a frontend exploration project built on top of NASA Open APIs. It focuses
-            on performance, clean UI, and modern web practices.
+            Nasatoria is a frontend exploration project built on top of NASA Open APIs, focused on
+            performance and clean UI.
           </p>
         </div>
       </div>
     </section>
 
     <!-- SECTION 4: CTA -->
-    <section class="h-screen snap-start flex items-center">
+    <section class="section flex items-center">
       <div class="max-w-3xl mx-auto px-6 w-full">
         <div class="bg-secondary border border-border rounded-2xl p-8 text-center">
           <h2 class="text-2xl font-bold text-accent">Ready to Explore?</h2>
@@ -84,5 +91,5 @@ import NasaLogo from "@/assets/logo.svg"
         </div>
       </div>
     </section>
-  </div>
+  </full-page>
 </template>
