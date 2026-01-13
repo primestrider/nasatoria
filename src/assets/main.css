@@ -1,1 +1,53 @@
 @import "tailwindcss";
+
+@theme {
+  --font-saira: "Saira", sans-serif;
+}
+
+@font-face {
+  font-family: "Saira";
+  src: url("./fonts/Saira-Light.ttf");
+  font-weight: 300;
+  unicode-range: U+0025-00FF;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Saira";
+  src: url("./fonts/Saira-Regular.ttf");
+  font-weight: 400;
+  unicode-range: U+0025-00FF;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Saira";
+  src: url("./fonts/Saira-Medium.ttf");
+  font-weight: 500;
+  unicode-range: U+0025-00FF;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Saira";
+  src: url("./fonts/Saira-SemiBold.ttf");
+  font-weight: 600;
+  unicode-range: U+0025-00FF;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Saira";
+  src: url("./fonts/Saira-Bold.ttf");
+  font-weight: 700;
+  unicode-range: U+0025-00FF;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Saira";
+  src: url("./fonts/Saira-ExtraBold.ttf");
+  font-weight: 800;
+  unicode-range: U+0025-00FF;
+  font-display: swap;
+}
