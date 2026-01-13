@@ -1,23 +1,15 @@
 import type { AxiosError, AxiosInstance } from "axios"
 
-import type { CustomAxiosRequestConfig } from "@/shared/models/api"
-
-// import { useCookies } from '@vueuse/integrations/useCookies'
-
 export function setupInterceptors(axiosInstance: AxiosInstance) {
-  // const cookies = useCookies();
-
   axiosInstance.interceptors.request.use(
     (config) => {
-      const customConfig = config as CustomAxiosRequestConfig
-      const shouldAttachToken = customConfig.meta?.requiresAuth !== false
+      const apiKey = import.meta.env.VITE_API_KEY
 
-      // token from localStorage / cookies
-      const authToken = localStorage.getItem("authToken")
-      // const authToken = cookies.get("authToken");
-
-      if (shouldAttachToken && authToken) {
-        config.headers?.set?.("Authorization", `Bearer ${authToken}`)
+      if (apiKey) {
+        config.params = {
+          ...config.params,
+          api_key: apiKey,
+        }
       }
 
       return config
